@@ -272,11 +272,10 @@ function make_slides($connect)
     </div>
     <div class="parallax " data-parallax="scroll" data-z-index="1" data-image-src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img(115).jpg">
       <div class="info">
-        <div class="text-center white-text ">
+        <div class="text-center white-text">
           <h2 class="h2-responsive mb-5 wow fadeIn">關於我們</h2>
           <div class="text-center">
-            <a href="#contact" class="btn btn-outline-white wow fadeIn ">Contact
-              us</a>
+            <a href="#contact" class="btn btn-outline-white wow fadeIn ">Contact us</a>
           </div>
         </div>
       </div>
