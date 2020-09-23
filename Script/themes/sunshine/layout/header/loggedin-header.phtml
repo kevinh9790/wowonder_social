@@ -212,6 +212,9 @@ if ($followers_alert == 0) {
 					</a>
 				</li>
 			<?php } ?> -->
+			<li class="dropdown-hidden-link"><!--活動-->
+				<a href="<?php echo Wo_SeoLink('index.php?link1=events'); ?>" data-ajax="?link1=events"><?php echo $wo['lang']['events'];?></a>
+			</li>
 			<li class="dropdown-hidden-link"><!--募資-->
 				<a href="<?php echo Wo_SeoLink('index.php?link1=funding'); ?>" data-ajax="?link1=funding"><?php echo $wo['lang']['funding'];?></a>
 			</li>
