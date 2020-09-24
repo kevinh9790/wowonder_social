@@ -265,12 +265,12 @@ function make_slides($connect)
           </div>
         </div>
 
-      </section>
+      </section> 
       <!--Section: Best Features-->
 
 
     </div>
-    <div class="parallax " data-parallax="scroll" data-z-index="1" data-image-src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img(115).jpg">
+    <div class="parallax " data-parallax="scroll" data-z-index="1" data-image-src="assets/img/downbackground.jpg">
       <div class="info">
         <div class="text-center white-text">
           <h2 class="h2-responsive mb-5 wow fadeIn">關於我們</h2>
