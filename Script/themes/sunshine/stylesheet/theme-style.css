@@ -454,7 +454,7 @@ svg {vertical-align: middle;}
 .wo_my__groups .dropdown .btn svg{margin-top: 2px;fill: #404040;}
 
 /*Settings*/
-.sun_setting_header {padding: 20px 20px 100px;background: #4d91ea;position: relative;border-radius: 5px;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);overflow: hidden;}
+.sun_setting_header {padding: 20px 20px 100px;background: #ff7a2d;position: relative;border-radius: 5px;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);overflow: hidden;}
 .sun_setting_header .ss_innr {position: relative;z-index: 1;}
 .sun_setting_header .ss_innr > h3 {margin: 0 0 10px;color: white;font-family: "Lato", sans-serif;font-size: 28px;line-height: 1;}
 .sun_setting_header .ss_innr > .sun_set_avatr {margin-top: 35px;}
