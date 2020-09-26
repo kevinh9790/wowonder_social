@@ -265,19 +265,16 @@ function make_slides($connect)
           </div>
         </div>
 
-      </section>
+      </section> 
       <!--Section: Best Features-->
 
 
     </div>
-    <div class="parallax " data-parallax="scroll" data-z-index="1" data-image-src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img(115).jpg">
+    <div class="parallax " data-parallax="scroll" data-z-index="1" data-image-src="assets/img/downbackground.jpg">
       <div class="info">
-        <div class="text-center white-text ">
+        <div class="text-center white-text">
           <h2 class="h2-responsive mb-5 wow fadeIn">關於我們</h2>
-          <div class="text-center">
-            <a href="#contact" class="btn btn-outline-white wow fadeIn ">Contact
-              us</a>
-          </div>
+            假如我們的音樂只能使人愉快，那很遺憾，我們的目的是使人們高尚起來。—亨德爾
         </div>
       </div>
     </div>
@@ -303,10 +300,16 @@ function make_slides($connect)
         <!--First column-->
         <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
           <h6 class="text-uppercase font-weight-bold">
-            <strong>Company name</strong>
-          </h6>
-          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-          <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <a class="brand header-brand" href="http://localhost/wowonder_social/Script/startbootstrap-creative-gh-pages/index.php">
+				    <img width="150" height="30" src="assets/img/logo.png" />
+			    </a>
+          </h6><br>
+          <!-- 紫線 -->
+          <!-- <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
+          <p>
+            <i class="fas fa-home mr-3"></i></i>Taipei, Taiwan</p>
+          <p>
+            <i class="fa fa-phone mr-3"></i>0912345678</p>
         </div>
         <!--/.First column-->
 
@@ -317,22 +320,22 @@ function make_slides($connect)
           </h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
-            <a href="#!">MDBootstrap</a>
+            <a href="http://localhost/wowonder_social/Script/blogs/">部落格</a>
           </p>
           <p>
-            <a href="#!">MDWordPress</a>
+            <a href="http://localhost/wowonder_social/Script/events/">活動</a>
           </p>
           <p>
-            <a href="#!">BrandFlow</a>
+            <a href="#!">租借器材</a>
           </p>
           <p>
-            <a href="#!">Bootstrap Angular</a>
+            <a href="http://localhost/wowonder_social/Script/funding/">募資</a>
           </p>
         </div>
         <!--/.Second column-->
 
         <!--Third column-->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <!-- <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
           <h6 class="text-uppercase font-weight-bold">
             <strong>Useful links</strong>
           </h6>
@@ -349,7 +352,7 @@ function make_slides($connect)
           <p>
             <a href="#!">Help</a>
           </p>
-        </div>
+        </div> -->
         <!--/.Third column-->
 
         <!--Fourth column-->
