@@ -99,9 +99,9 @@ if (!empty($_GET['url'])) {
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-image"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
 					<input name="phtoscount" type="text" class="form-control bg_read_input" readonly>
 				</div>
-				<div class="create-album <?php echo Wo_RightToLeft('pull-right');?>" onclick="Wo_OpenAlbum();">
+				<!-- <div class="create-album <?php echo Wo_RightToLeft('pull-right');?>" onclick="Wo_OpenAlbum();">
 					<div class="create-text"><?php echo $wo['lang']['create_album'];?></div>
-				</div>
+				</div> -->
 				<div class="clear"></div>
 				<div style="overflow-x: auto;"><div id="image-holder"></div></div>
 			</div>
@@ -201,37 +201,52 @@ if (!empty($_GET['url'])) {
 				</div>
 				<input type="hidden" name="post_color" id="post_color_input">
 			</div>
-			<?php } ?>
-			
+      <?php } ?>
+      
+     
 			<!--Uploaded Image-->
 			<div class="poster-left-buttons" onclick="Wo_ShowPosInfo();">
 				<span class="btn btn-file img">
 					<img src="<?php echo $wo['config']['theme_url'];?>/img/icons/pub-img.svg" alt="<?php echo $wo['lang']['upload_images'] ?>" /> <?php echo $wo['lang']['upload_images']; ?>
 					<input type="file" id="publisher-photos" accept="image/x-png, image/gif, image/jpeg" name="postPhotos[]" multiple="multiple">
 				</span>
-			</div>
-			<!--Create Poll-->
-			<div class="poster-left-buttons" onclick="Wo_ShowPosInfo();">
-				<span class="btn btn-file poll-form pol">
-					<img src="<?php echo $wo['config']['theme_url'];?>/img/icons/pub-poll.svg" alt="<?php echo $wo['lang']['create_poll'] ?>" /> <?php echo $wo['lang']['create_poll']; ?>
-				</span>
-			</div>
-			<!--Uploaded Video-->
-			<!--<?php if ($wo['config']['video_upload'] == 1) { ?>
+      </div>
+      <!--Uploaded Music-->
+      <div class="poster-left-buttons" onclick="Wo_ShowPosInfo();">
+          <span class="btn btn-file aud">
+						<span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#3f51b5" d="M21,3V15.5A3.5,3.5 0 0,1 17.5,19A3.5,3.5 0 0,1 14,15.5A3.5,3.5 0 0,1 17.5,12C18.04,12 18.55,12.12 19,12.34V6.47L9,8.6V17.5A3.5,3.5 0 0,1 5.5,21A3.5,3.5 0 0,1 2,17.5A3.5,3.5 0 0,1 5.5,14C6.04,14 6.55,14.12 7,14.34V6L21,3Z"></svg></span> <?php echo $wo['lang']['audio_upload']; ?>
+						<input type="file" id="publisher-music" name="postMusic" accept="audio/*">
+					</span>
+      </div>
+      <!--Uploaded Video-->
+			<?php if ($wo['config']['video_upload'] == 1) { ?>
 				<div class="poster-left-buttons" onclick="Wo_ShowPosInfo();">
 					<span class="btn btn-file vid">
 						<img src="<?php echo $wo['config']['theme_url'];?>/img/icons/pub-vid.svg" alt="<?php echo $wo['lang']['upload_video'] ?>" /> <?php echo $wo['lang']['upload_video']; ?>
 						<input type="file" id="publisher-video" name="postVideo" accept="video/*">
 					</span>
 				</div>
-			<?php } ?>-->
+			<?php } ?>
 			<div class="poster-left-buttons" onclick="Wo_ShowPosInfo();">
 				<span class="btn mor">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M17,13H13V17H11V13H7V11H11V7H13V11H17M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" /></svg> <span><?php echo $wo['lang']['more']; ?></span>
 				</span>
 			</div>
-		</div>
-		
+    </div>
+     <!--Add Feeling-->
+			  <!-- <div class="poster-left-buttons" onclick="Wo_ShowPosInfo();">
+          <span class="btn btn-file fel">
+						<span><img src="<?php echo $wo['config']['theme_url'];?>/img/1f600.png" alt="<?php echo $wo['lang']['feelings'] ?>" /></span>
+						<?php echo $wo['lang']['feelings']; ?>
+					</span>
+        </div> -->
+		<!--Create Poll-->
+			<!-- <div class="poster-left-buttons" onclick="Wo_ShowPosInfo();">
+				<span class="btn btn-file poll-form pol">
+					<img src="<?php echo $wo['config']['theme_url'];?>/img/icons/pub-poll.svg" alt="<?php echo $wo['lang']['create_poll'] ?>" /> <?php echo $wo['lang']['create_poll']; ?>
+				</span>
+			</div> -->
+			
 		
 		<!--Publisher Box Footer-->
 		<div class="publisher-box-footer">
@@ -247,7 +262,7 @@ if (!empty($_GET['url'])) {
 			</div>
 			<?php endif ?>-->
 			<!--Record Audio-->
-			<?php if ($wo['config']['audio_upload'] == 1) { ?>
+			<!-- <?php if ($wo['config']['audio_upload'] == 1) { ?>
 			<div class="sun_pub_more_items" id="recordPostAudioWrapper">
 				<div class="poster-left-buttons">
 					<span class="btn btn-file rec">
@@ -256,18 +271,18 @@ if (!empty($_GET['url'])) {
 					<span id="postRecordingTime" class="hidden">00:00</span>
 				</div>
 			</div>
-			<?php } ?>
+			<?php } ?> -->
 			<!--Add Feeling-->
-			<div class="sun_pub_more_items emo-form">
+			<!-- <div class="sun_pub_more_items emo-form">
 				<div class="poster-left-buttons">
 					<span class="btn btn-file fel">
 						<span><img src="<?php echo $wo['config']['theme_url'];?>/img/1f600.png" alt="<?php echo $wo['lang']['feelings'] ?>" /></span>
 						<?php echo $wo['lang']['feelings']; ?>
 					</span>
 				</div>
-			</div>
+			</div> -->
 			<!--Uploaded File-->
-			<?php if($wo['config']['fileSharing'] == 1) { ?>
+			<!-- <?php if($wo['config']['fileSharing'] == 1) { ?>
 			<div class="sun_pub_more_items">
 				<div class="poster-left-buttons">
 					<span class="btn btn-file fil">
@@ -276,7 +291,7 @@ if (!empty($_GET['url'])) {
 					</span>
 				</div>
 			</div>
-			<?php } ?>
+			<?php } ?> -->
 
 			<!--Create Product-->
 			<!--<?php if (($wo['page'] == 'home' || $wo['page'] == 'timeline') && $wo['config']['classified'] == 1) { ?>
@@ -307,7 +322,7 @@ if (!empty($_GET['url'])) {
 				</div>
 			</div>-->
 			<!--Uploaded Music-->
-			<?php if ($wo['config']['audio_upload'] == 1) { ?>
+			<!-- <?php if ($wo['config']['audio_upload'] == 1) { ?>
 			<div class="sun_pub_more_items">
 				<div class="poster-left-buttons">
 					<span class="btn btn-file aud">
@@ -316,7 +331,7 @@ if (!empty($_GET['url'])) {
 					</span>
 				</div>
 			</div>
-			<?php } ?>
+			<?php } ?> -->
 			</div>
 
 		 <div class="pub-footer-bottom">
