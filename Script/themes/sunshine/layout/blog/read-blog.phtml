@@ -41,7 +41,7 @@
 						<span class="middot <?php echo Wo_RightToLeft('pull-left'); ?>">.</span>
 						<div class="user_button <?php echo Wo_RightToLeft('pull-left'); ?>" style="margin: 6px 0px;">
 							<?php if ($wo['article']['is_post_admin']):?>
-								<a class="btn btn-info" href="<?php echo Wo_SeoLink('index.php?link1=edit-blog&id=' . $wo['article']['id']) ?>"><?php echo $wo['lang']['edit']; ?></a>
+								<a class="btn btn-info" href="<?php echo Wo_SeoLink('index.php?link1=edit-blog&id=' . $wo['article']['id']) ?>"><?php echo $wo['lang']['edit_post']; ?></a>
 							<?php endif;?>
 							<?php echo Wo_GetFollowButton($wo['article']['author']['user_id']);?>
 						</div>
