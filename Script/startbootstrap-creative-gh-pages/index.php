@@ -2,7 +2,7 @@
 
 <?php
 
-$connect = mysqli_connect("localhost", "root", "", "wowonder");
+$connect = mysqli_connect("db4free.net", "heke0621", "7UHTCY6@876", "heke0621_music");
 function make_query($connect)
 {
   $query = "SELECT id,title,thumbnail,user,username,posted,view FROM Wo_Blog INNER JOIN Wo_Users ON Wo_Blog.user=Wo_Users.user_id ORDER BY view DESC";
