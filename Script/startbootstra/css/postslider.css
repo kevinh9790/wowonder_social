@@ -1,0 +1,8 @@
+.post-slider {
+    border: 1px solid red;
+}
+
+.post-slider,
+.post-wrapper {
+    border: 1px dashed red;
+}

@@ -316,17 +316,21 @@ function make_slides($connect)
         <!--Second column-->
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <h6 class="text-uppercase font-weight-bold">
-            <!-- <strong>Service</strong> -->
+            <strong>Products</strong>
           </h6>
-          <!-- <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
-            <a href="http://localhost/wowonder_social/Script/blogs/">部落格</a></p>
+            <a href="http://localhost/wowonder_social/Script/blogs/">部落格</a>
+          </p>
           <p>
-            <a href="http://localhost/wowonder_social/Script/events/">活動</a></p>
+            <a href="http://localhost/wowonder_social/Script/events/">活動</a>
+          </p>
           <p>
-            <a href="#!">租借器材</a></p>
+            <a href="#!">租借器材</a>
+          </p>
           <p>
-            <a href="http://localhost/wowonder_social/Script/funding/">募資</a></p>
+            <a href="http://localhost/wowonder_social/Script/funding/">募資</a>
+          </p>
         </div>
         <!--/.Second column-->
 
@@ -354,17 +358,17 @@ function make_slides($connect)
         <!--Fourth column-->
         <div class="col-md-4 col-lg-3 col-xl-3">
           <h6 class="text-uppercase font-weight-bold">
-            <!-- <strong>Contact</strong> -->
+            <strong>Contact</strong>
           </h6>
-          <!-- <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
-            <a href="http://localhost/wowonder_social/Script/terms/about-us">關於</a></p>
+            <i class="fas fa-home"></i></i> New York, NY 10012, US</p>
           <p>
-            <a href="http://localhost/wowonder_social/Script/contact-us">聯繫我們</a></p>
+            <i class="fa fa-envelope mr-3"></i> info@example.com</p>
           <p>
-            <a href="http://localhost/wowonder_social/Script/terms/privacy-policy">隱私政策</a></p>
+            <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
           <p>
-            <a href="http://localhost/wowonder_social/Script/terms/terms">使用條款</a></p>
+            <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
         </div>
         <!--/.Fourth column-->
 
