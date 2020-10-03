@@ -307,9 +307,11 @@ function make_slides($connect)
           <!-- 紫線 -->
           <!-- <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
           <p>
-            <i class="fas fa-home mr-3"></i></i>Taipei, Taiwan</p>
+            <i class="fas fa-home mr-3"></i>Taipei, Taiwan</p>
           <p>
-            <i class="fa fa-phone mr-3"></i>0912345678</p>
+            <i class="fa fa-phone mr-3"></i>02-12345678</p>
+          <p>
+            <i class="fa fa-envelope mr-3"></i>heke0621@gmail.com</p>
         </div>
         <!--/.First column-->
 
@@ -358,17 +360,17 @@ function make_slides($connect)
         <!--Fourth column-->
         <div class="col-md-4 col-lg-3 col-xl-3">
           <h6 class="text-uppercase font-weight-bold">
-            <strong>Contact</strong>
+            <strong>About</strong>
           </h6>
           <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
           <p>
-            <i class="fas fa-home"></i></i> New York, NY 10012, US</p>
+            <a href="http://localhost/wowonder_social/Script/terms/about-us">關於我們</p>
           <p>
-            <i class="fa fa-envelope mr-3"></i> info@example.com</p>
+            <a href="http://localhost/wowonder_social/Script/contact-us">聯繫我們</p>
           <p>
-            <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+            <a href="http://localhost/wowonder_social/Script/terms/privacy-policy">隱私政策</p>
           <p>
-            <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+            <a href="http://localhost/wowonder_social/Script/terms/terms">使用條款</p>
         </div>
         <!--/.Fourth column-->
 
