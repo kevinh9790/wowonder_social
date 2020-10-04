@@ -1,3 +1,10 @@
+<style>
+.musicman {
+	font-family:微軟正黑體;
+	color: #58a2fd;
+	size:4;
+}
+</style>
 <?php
 $IsOwner       = Wo_IsOnwer($wo['user_profile']['user_id']);
 $IsOwnerUser   = Wo_IsOnwerUser($wo['user_profile']['user_id']);
@@ -119,17 +126,10 @@ if ($wo['loggedin'] && $IsOwnerUser) {
 							</span>
 							<?php } ?>
 						</div>
-						<div class="opt_buttons">
-							<span class="user-follow-button">
-								<?php echo Wo_GetFollowButton($wo['user_profile']['user_id']);?>
-							</span>
-							<span class="profile-message-btn">
-								<?php echo Wo_GetMessageButton($wo['user_profile']['user_id']);?>
-							</span>
-							<?php if($IsOwnerUser === true) { ?>
-								<a class="btn btn-link" href="<?php echo Wo_SeoLink('index.php?link1=timeline&u=' . $wo['user_profile']['username'] . '&type=activities');?>" data-ajax="?link1=timeline&u=<?php echo $wo['user_profile']['username'] . '&type=activities'; ?>"><?php echo $wo['lang']['activities'];?></a>
-							<?php } ?>
-						
+						<br>
+						<div>
+							<img width="70" height="25" class="align-items-start" src="themes/sunshine/img/musicman.png"/>
+						</div>						
 						
 						<!--Mobile Buttons-->
 						<div class="sun_user_actions mobi_show">
@@ -169,7 +169,6 @@ if ($wo['loggedin'] && $IsOwnerUser) {
 									<?php endif;?>
 								</ul>
 							</div>
-						</div>
 						</div>
 					</div>
 				</div>
