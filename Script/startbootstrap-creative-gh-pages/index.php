@@ -42,7 +42,7 @@ function make_slides($connect)
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <title>MUSIC SITE</title>
+  <title>藏樂坊</title>
   <!-- Favicon-->
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
   <!-- Font Awesome icons (free version)-->
@@ -187,7 +187,7 @@ function make_slides($connect)
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
       <div class="container">
-        <a class="navbar-brand font-weight-bold" href="#page-top">Music Site</a>
+        <a class="navbar-brand font-weight-bold" href="#page-top">藏樂坊</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="basicExampleNav">
           <ul class="navbar-nav ml-auto my-2 my-lg-0 smooth-scroll">
@@ -301,7 +301,7 @@ function make_slides($connect)
         <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
           <h6 class="text-uppercase font-weight-bold">
           <a class="brand header-brand" href="http://localhost/wowonder_social/Script/startbootstrap-creative-gh-pages/index.php">
-				    <img width="150" height="30" src="assets/img/logo.png" />
+				    <img width="100" height="30" src="assets/img/logo.png" />
 			    </a>
           </h6><br>
           <!-- 紫線 -->
