@@ -196,7 +196,7 @@ if (empty($page_loaded)) {
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="<?php echo $wo['site_url']; ?>"><img src="<?php echo $wo['config']['theme_url']; ?>/img/logo.png" alt=""></a>
+                <a class="navbar-brand" href="<?php echo $wo['site_url']; ?>"><img width="120" height="47" class="align-items-start" src="<?php echo $wo['config']['theme_url']; ?>/img/logo.png" alt=""></a>
             </div>
             <div class="navbar-header pull-right">
                 <div class="form-group form-float wo_admin_hdr_srch">
