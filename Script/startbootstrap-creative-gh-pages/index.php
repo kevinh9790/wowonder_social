@@ -64,6 +64,17 @@ function make_slides($connect)
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="css/style.css">
   <!-- <link href="css/styles.css" rel="stylesheet" /> -->
+  <!-- 
+  <link rel="stylesheet" href="https://localhost/wowonder_social/Script/themes/sunshine/stylesheet/general-style-plugins.css"> -->
+
+
+  <link rel="stylesheet" href="https://localhost/wowonder_social/Script/themes/sunshine/stylesheet/style.css">
+  <link rel="stylesheet" href="https://localhost/wowonder_social/Script/themes/sunshine/stylesheet/theme-style.css">
+
+
+
+  <script src="https://localhost/wowonder_social/Script/themes/sunshine/javascript/jquery-3.1.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-ui-touch-punch@0.2.3/jquery.ui.touch-punch.min.js"></script>
 
   <style>
     html,
@@ -265,7 +276,7 @@ function make_slides($connect)
           </div>
         </div>
 
-      </section> 
+      </section>
       <!--Section: Best Features-->
 
 
@@ -274,16 +285,388 @@ function make_slides($connect)
       <div class="info">
         <div class="text-center white-text">
           <h2 class="h2-responsive mb-5 wow fadeIn">關於我們</h2>
-            假如我們的音樂只能使人愉快，那很遺憾，我們的目的是使人們高尚起來。—亨德爾
+          假如我們的音樂只能使人愉快，那很遺憾，我們的目的是使人們高尚起來。—亨德爾
         </div>
       </div>
     </div>
 
     <div class="container">
+    <div class="col-md-12 mb-4">
+    <h1 class="slider-title text-uppercase font-weight-bold">器材徵集</h1>
+    </div>
 
 
       <!--Section: Contact-->
-      
+      <div class="sun_search_head">
+        <form action="https://localhost/wowonder_social/Script/search" method="get" class="search-filter-form" id="search_form">
+          <div class="sun_srch_tp_filtr">
+            <div class="frst_srch_row">
+              <div class="dropdown">
+                <span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">出借項目: <span class="verfied_text">任何</span></span>
+                <ul class="dropdown-menu clearfix verfied_menu" role="menu">
+                  <label class="radio-inline" for="verified-0">
+                    <input type="radio" name="verified" id="verified-0" value="all" checked="">
+                    <span>任何</span>
+                  </label>
+                  <label class="radio-inline" for="verified-1">
+                    <input type="radio" name="verified" id="verified-1" value="on">
+                    <span>已驗證</span>
+                  </label>
+                  <label class="radio-inline" for="verified-2">
+                    <input type="radio" name="verified" id="verified-2" value="off">
+                    <span>未驗證</span>
+                  </label>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">出借類型: <span class="status_text">任何</span></span>
+                <ul class="dropdown-menu clearfix status_menu" role="menu">
+                  <label class="radio-inline" for="status-0">
+                    <input type="radio" name="status" id="status-0" value="all" checked="">
+                    <span>任何</span>
+                  </label>
+                  <label class="radio-inline" for="status-1">
+                    <input type="radio" name="status" id="status-1" value="on">
+                    <span>線上</span>
+                  </label>
+                  <label class="radio-inline" for="status-2">
+                    <input type="radio" name="status" id="status-2" value="off">
+                    <span>離線</span>
+                  </label>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <!--  -->
+                <span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">品牌: <span class="gender_text">任何</span> </span>
+                <ul class="dropdown-menu clearfix gender_menu" role="menu">
+                  <label class="radio-inline" for="gender-female">
+                    <input type="radio" name="gender" id="gender-female" value="female">
+                    <span>女生</span>
+                  </label>
+                  <label class="radio-inline" for="gender-male">
+                    <input type="radio" name="gender" id="gender-male" value="male">
+                    <span>男生</span>
+                  </label>
+                  <label class="radio-inline" for="gender-1652">
+                    <input type="radio" name="gender" id="gender-1652" value="1652">
+                    <span>性別中立</span>
+                  </label>
+                </ul>
+              </div>
+            </div>
+            <div class="sec_srch_row">
+              
+              <script>
+                $(function() {
+                  $("#slider-range").slider({
+                    range: true,
+                    min: 10,
+                    max: 70,
+                    values: [18, 50],
+                    slide: function(event, ui) {
+                      $("#amount").val(ui.values[0] + " - " + ui.values[1]);
+                      $("#age_from").val(ui.values[0]);
+                      $("#age_to").val(ui.values[1]);
+                    }
+                  });
+                  $("#amount").val($("#slider-range").slider("values", 0) + " - " + $("#slider-range").slider("values", 1));
+                });
+              </script>
+              <div class="dropdown">
+                <span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">租金: <span class="age_text">No</span> </span>
+                <ul class="dropdown-menu clearfix age_menu" role="menu">
+                  <label class="radio-inline" for="filterbyage-0">
+                    <input type="radio" name="filterbyage" id="filterbyage-0" value="yes" onclick="$('.agefilter_hide').css({'display':'block'});">
+                    <span>Yes</span>
+                  </label>
+                  <label class="radio-inline" for="filterbyage-1">
+                    <input type="radio" name="filterbyage" id="filterbyage-1" value="no" onclick="$('.agefilter_hide').css({'display':'none'});" checked="">
+                    <span>No</span>
+                  </label>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="sun_srch_btm_filtr">
+            <div class="row ml0 mr0">
+              <div class="col-md-6 col-xs-6">
+                <div class="form-group">
+                  <input type="text" name="query" id="query" class="form-control" value="" autocomplete="off" placeholder="關鍵字">
+                </div>
+              </div>
+              <div class="col-md-6 col-xs-6">
+                <div class="form-group">
+                  <select name="country" id="country" class="form-control">
+                    <option value="all" selected="">國家: 任何</option>
+                    <option value="0" selected="">選擇你所在的地區</option>
+                    <option value="1">United States</option>
+                    <option value="2">Canada</option>
+                    <option value="3">Afghanistan</option>
+                    <option value="4">Albania</option>
+                    <option value="5">Algeria</option>
+                    <option value="6">American Samoa</option>
+                    <option value="7">Andorra</option>
+                    <option value="8">Angola</option>
+                    <option value="9">Anguilla</option>
+                    <option value="10">Antarctica</option>
+                    <option value="11">Antigua and/or Barbuda</option>
+                    <option value="12">Argentina</option>
+                    <option value="13">Armenia</option>
+                    <option value="14">Aruba</option>
+                    <option value="15">Australia</option>
+                    <option value="16">Austria</option>
+                    <option value="17">Azerbaijan</option>
+                    <option value="18">Bahamas</option>
+                    <option value="19">Bahrain</option>
+                    <option value="20">Bangladesh</option>
+                    <option value="21">Barbados</option>
+                    <option value="22">Belarus</option>
+                    <option value="23">Belgium</option>
+                    <option value="24">Belize</option>
+                    <option value="25">Benin</option>
+                    <option value="26">Bermuda</option>
+                    <option value="27">Bhutan</option>
+                    <option value="28">Bolivia</option>
+                    <option value="29">Bosnia and Herzegovina</option>
+                    <option value="30">Botswana</option>
+                    <option value="31">Bouvet Island</option>
+                    <option value="32">Brazil</option>
+                    <option value="34">Brunei Darussalam</option>
+                    <option value="35">Bulgaria</option>
+                    <option value="36">Burkina Faso</option>
+                    <option value="37">Burundi</option>
+                    <option value="38">Cambodia</option>
+                    <option value="39">Cameroon</option>
+                    <option value="40">Cape Verde</option>
+                    <option value="41">Cayman Islands</option>
+                    <option value="42">Central African Republic</option>
+                    <option value="43">Chad</option>
+                    <option value="44">Chile</option>
+                    <option value="45">China</option>
+                    <option value="46">Christmas Island</option>
+                    <option value="47">Cocos (Keeling) Islands</option>
+                    <option value="48">Colombia</option>
+                    <option value="49">Comoros</option>
+                    <option value="50">Congo</option>
+                    <option value="51">Cook Islands</option>
+                    <option value="52">Costa Rica</option>
+                    <option value="53">Croatia (Hrvatska)</option>
+                    <option value="54">Cuba</option>
+                    <option value="55">Cyprus</option>
+                    <option value="56">Czech Republic</option>
+                    <option value="57">Denmark</option>
+                    <option value="58">Djibouti</option>
+                    <option value="59">Dominica</option>
+                    <option value="60">Dominican Republic</option>
+                    <option value="61">East Timor</option>
+                    <option value="62">Ecuador</option>
+                    <option value="63">Egypt</option>
+                    <option value="64">El Salvador</option>
+                    <option value="65">Equatorial Guinea</option>
+                    <option value="66">Eritrea</option>
+                    <option value="67">Estonia</option>
+                    <option value="68">Ethiopia</option>
+                    <option value="69">Falkland Islands (Malvinas)</option>
+                    <option value="70">Faroe Islands</option>
+                    <option value="71">Fiji</option>
+                    <option value="72">Finland</option>
+                    <option value="73">France</option>
+                    <option value="74">France, Metropolitan</option>
+                    <option value="75">French Guiana</option>
+                    <option value="76">French Polynesia</option>
+                    <option value="77">French Southern Territories</option>
+                    <option value="78">Gabon</option>
+                    <option value="79">Gambia</option>
+                    <option value="80">Georgia</option>
+                    <option value="81">Germany</option>
+                    <option value="82">Ghana</option>
+                    <option value="83">Gibraltar</option>
+                    <option value="84">Greece</option>
+                    <option value="85">Greenland</option>
+                    <option value="86">Grenada</option>
+                    <option value="87">Guadeloupe</option>
+                    <option value="88">Guam</option>
+                    <option value="89">Guatemala</option>
+                    <option value="90">Guinea</option>
+                    <option value="91">Guinea-Bissau</option>
+                    <option value="92">Guyana</option>
+                    <option value="93">Haiti</option>
+                    <option value="94">Heard and Mc Donald Islands</option>
+                    <option value="95">Honduras</option>
+                    <option value="96">Hong Kong</option>
+                    <option value="97">Hungary</option>
+                    <option value="98">Iceland</option>
+                    <option value="99">India</option>
+                    <option value="100">Indonesia</option>
+                    <option value="101">Iran (Islamic Republic of)</option>
+                    <option value="102">Iraq</option>
+                    <option value="103">Ireland</option>
+                    <option value="104">Israel</option>
+                    <option value="105">Italy</option>
+                    <option value="106">Ivory Coast</option>
+                    <option value="107">Jamaica</option>
+                    <option value="108">Japan</option>
+                    <option value="109">Jordan</option>
+                    <option value="110">Kazakhstan</option>
+                    <option value="111">Kenya</option>
+                    <option value="112">Kiribati</option>
+                    <option value="113">Korea, Democratic People's Republic of</option>
+                    <option value="114">Korea, Republic of</option>
+                    <option value="115">Kosovo</option>
+                    <option value="116">Kuwait</option>
+                    <option value="117">Kyrgyzstan</option>
+                    <option value="118">Lao People's Democratic Republic</option>
+                    <option value="119">Latvia</option>
+                    <option value="120">Lebanon</option>
+                    <option value="121">Lesotho</option>
+                    <option value="122">Liberia</option>
+                    <option value="123">Libyan Arab Jamahiriya</option>
+                    <option value="124">Liechtenstein</option>
+                    <option value="125">Lithuania</option>
+                    <option value="126">Luxembourg</option>
+                    <option value="127">Macau</option>
+                    <option value="128">Macedonia</option>
+                    <option value="129">Madagascar</option>
+                    <option value="130">Malawi</option>
+                    <option value="131">Malaysia</option>
+                    <option value="132">Maldives</option>
+                    <option value="133">Mali</option>
+                    <option value="134">Malta</option>
+                    <option value="135">Marshall Islands</option>
+                    <option value="136">Martinique</option>
+                    <option value="137">Mauritania</option>
+                    <option value="138">Mauritius</option>
+                    <option value="139">Mayotte</option>
+                    <option value="140">Mexico</option>
+                    <option value="141">Micronesia, Federated States of</option>
+                    <option value="142">Moldova, Republic of</option>
+                    <option value="143">Monaco</option>
+                    <option value="144">Mongolia</option>
+                    <option value="145">Montenegro</option>
+                    <option value="146">Montserrat</option>
+                    <option value="147">Morocco</option>
+                    <option value="148">Mozambique</option>
+                    <option value="149">Myanmar</option>
+                    <option value="150">Namibia</option>
+                    <option value="151">Nauru</option>
+                    <option value="152">Nepal</option>
+                    <option value="153">Netherlands</option>
+                    <option value="154">Netherlands Antilles</option>
+                    <option value="155">New Caledonia</option>
+                    <option value="156">New Zealand</option>
+                    <option value="157">Nicaragua</option>
+                    <option value="158">Niger</option>
+                    <option value="159">Nigeria</option>
+                    <option value="160">Niue</option>
+                    <option value="161">Norfork Island</option>
+                    <option value="162">Northern Mariana Islands</option>
+                    <option value="163">Norway</option>
+                    <option value="164">Oman</option>
+                    <option value="165">Pakistan</option>
+                    <option value="166">Palau</option>
+                    <option value="167">Panama</option>
+                    <option value="168">Papua New Guinea</option>
+                    <option value="169">Paraguay</option>
+                    <option value="170">Peru</option>
+                    <option value="171">Philippines</option>
+                    <option value="172">Pitcairn</option>
+                    <option value="173">Poland</option>
+                    <option value="174">Portugal</option>
+                    <option value="175">Puerto Rico</option>
+                    <option value="176">Qatar</option>
+                    <option value="177">Reunion</option>
+                    <option value="178">Romania</option>
+                    <option value="179">Russian Federation</option>
+                    <option value="180">Rwanda</option>
+                    <option value="181">Saint Kitts and Nevis</option>
+                    <option value="182">Saint Lucia</option>
+                    <option value="183">Saint Vincent and the Grenadines</option>
+                    <option value="184">Samoa</option>
+                    <option value="185">San Marino</option>
+                    <option value="186">Sao Tome and Principe</option>
+                    <option value="187">Saudi Arabia</option>
+                    <option value="188">Senegal</option>
+                    <option value="189">Serbia</option>
+                    <option value="190">Seychelles</option>
+                    <option value="191">Sierra Leone</option>
+                    <option value="192">Singapore</option>
+                    <option value="193">Slovakia</option>
+                    <option value="194">Slovenia</option>
+                    <option value="195">Solomon Islands</option>
+                    <option value="196">Somalia</option>
+                    <option value="197">South Africa</option>
+                    <option value="198">South Georgia South Sandwich Islands</option>
+                    <option value="199">Spain</option>
+                    <option value="200">Sri Lanka</option>
+                    <option value="201">St. Helena</option>
+                    <option value="202">St. Pierre and Miquelon</option>
+                    <option value="203">Sudan</option>
+                    <option value="204">Suriname</option>
+                    <option value="205">Svalbarn and Jan Mayen Islands</option>
+                    <option value="206">Swaziland</option>
+                    <option value="207">Sweden</option>
+                    <option value="208">Switzerland</option>
+                    <option value="209">Syrian Arab Republic</option>
+                    <option value="210">Taiwan</option>
+                    <option value="211">Tajikistan</option>
+                    <option value="212">Tanzania, United Republic of</option>
+                    <option value="213">Thailand</option>
+                    <option value="214">Togo</option>
+                    <option value="215">Tokelau</option>
+                    <option value="216">Tonga</option>
+                    <option value="217">Trinidad and Tobago</option>
+                    <option value="218">Tunisia</option>
+                    <option value="219">Turkey</option>
+                    <option value="220">Turkmenistan</option>
+                    <option value="221">Turks and Caicos Islands</option>
+                    <option value="222">Tuvalu</option>
+                    <option value="223">Uganda</option>
+                    <option value="224">Ukraine</option>
+                    <option value="225">United Arab Emirates</option>
+                    <option value="226">United Kingdom</option>
+                    <option value="227">United States minor outlying islands</option>
+                    <option value="228">Uruguay</option>
+                    <option value="229">Uzbekistan</option>
+                    <option value="230">Vanuatu</option>
+                    <option value="231">Vatican City State</option>
+                    <option value="232">Venezuela</option>
+                    <option value="233">Vietnam</option>
+                    <option value="238">Yemen</option>
+                    <option value="239">Yugoslavia</option>
+                    <option value="240">Zaire</option>
+                    <option value="241">Zambia</option>
+                    <option value="242">Zimbabwe</option>
+                  </select>
+                </div>
+              </div>
+              <div class="">
+              </div>
+            </div>
+            <div class="sun_srch_range">
+              <div class="pp_mat_input">
+                <input type="text" id="amount" class="agefilter_hide age_number" readonly="" style="display:none;">
+              </div>
+              <div class="form-group agefilter_hide" id="agefilter" style="display: none;">
+                <div class="form-group">
+                  <div id="slider-range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                    <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 13.3333%; width: 53.3333%;"></div><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 13.3333%;"></span><span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 66.6667%;"></span>
+                  </div>
+                  <input type="hidden" name="age_from" id="age_from" value="18">
+                  <input type="hidden" name="age_to" id="age_to" value="50">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sun_srch_btn text-center">
+            <button type="submit" class="btn btn-primary" >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"></path>
+              </svg> 搜尋 </button>
+          </div>
+        </form>
+      </div>
       <!--Section: Contact-->
 
 
@@ -300,10 +683,10 @@ function make_slides($connect)
         <!--First column-->
         <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
           <h6 class="text-uppercase font-weight-bold">
-          <a class="brand header-brand" href="http://localhost/wowonder_social/Script/startbootstrap-creative-gh-pages/index.php">
-				    <img width="100" height="30" src="assets/img/logo.png" />
-			    </a>
-          </h6><br>
+            <a class="brand header-brand" href="http://localhost/wowonder_social/Script/startbootstrap-creative-gh-pages/index.php">
+              <img width="100" height="30" src="assets/img/logo.png" />
+            </a>
+          </h6><br><br>
           <!-- 紫線 -->
           <!-- <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;"> -->
           <p>
@@ -328,7 +711,7 @@ function make_slides($connect)
             <a href="http://localhost/wowonder_social/Script/events/">活動</a>
           </p>
           <p>
-            <a href="#!">租借器材</a>
+            <a href="https://localhost/wowonder_social/Script/search?verified=all&status=all&filterbyage=no&query=&country=0&age_from=18&age_to=50">器材徵集</a>
           </p>
           <p>
             <a href="http://localhost/wowonder_social/Script/funding/">募資</a>
