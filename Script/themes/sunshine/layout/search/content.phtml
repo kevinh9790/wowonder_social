@@ -28,19 +28,55 @@ $type_to_find = '<h5 class="search-filter-center-text empty_state"><svg xmlns="h
 								}
 							?>
 							<div class="dropdown">
-								<span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $wo['lang']['verified']; ?>: <span class="verfied_text"><?php echo $verfied_text;?></span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7,10L12,15L17,10H7Z"></path></svg></span>
+								<span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">出借項目: <span class="verfied_text">所有範圍</span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7,10L12,15L17,10H7Z"></path></svg></span>
 								<ul class="dropdown-menu clearfix verfied_menu" role="menu">
 									<label class="radio-inline" for="verified-0">
 										<input type="radio" name="verified" id="verified-0" value="all" <?php echo $selected_verified_all;?>>
-										<span><?php echo $wo['lang']['all']; ?></span>
+										<span>所有範圍</span>
 									</label> 
 									<label class="radio-inline" for="verified-1">
 										<input type="radio" name="verified" id="verified-1" value="on" <?php echo $selected_verified_on;?>>
-										<span><?php echo $wo['lang']['verified']; ?></span>
+										<span>錄音介面</span>
 									</label>
 									<label class="radio-inline" for="verified-2">
 										<input type="radio" name="verified" id="verified-2" value="off"<?php echo $selected_verified_off;?>>
-										<span><?php echo $wo['lang']['unverified']; ?></span>
+										<span>鍵盤</span>
+									</label>
+									<label class="radio-inline" for="verified-3">
+										<input type="radio" name="verified" id="verified-3" value="off"<?php echo $selected_verified_off;?>>
+										<span>合成器</span>
+									</label>
+									<label class="radio-inline" for="verified-4">
+										<input type="radio" name="verified" id="verified-4" value="off"<?php echo $selected_verified_off;?>>
+										<span>模組化合成器</span>
+									</label>
+									<label class="radio-inline" for="verified-5">
+										<input type="radio" name="verified" id="verified-5" value="off"<?php echo $selected_verified_off;?>>
+										<span>節奏/取樣機</span>
+									</label>
+									<label class="radio-inline" for="verified-6">
+										<input type="radio" name="verified" id="verified-6" value="off"<?php echo $selected_verified_off;?>>
+										<span>聲學材料</span>
+									</label>
+									<label class="radio-inline" for="verified-7">
+										<input type="radio" name="verified" id="verified-7" value="off"<?php echo $selected_verified_off;?>>
+										<span>傳統樂器</span>
+									</label>
+									<label class="radio-inline" for="verified-8">
+										<input type="radio" name="verified" id="verified-8" value="off"<?php echo $selected_verified_off;?>>
+										<span>DJ器材</span>
+									</label>
+									<label class="radio-inline" for="verified-9">
+										<input type="radio" name="verified" id="verified-9" value="off"<?php echo $selected_verified_off;?>>
+										<span>音箱</span>
+									</label>
+									<label class="radio-inline" for="verified-10">
+										<input type="radio" name="verified" id="verified-10" value="off"<?php echo $selected_verified_off;?>>
+										<span>效果器</span>
+									</label>
+									<label class="radio-inline" for="verified-11">
+										<input type="radio" name="verified" id="verified-11" value="off"<?php echo $selected_verified_off;?>>
+										<span>其他</span>
 									</label>
 								</ul>
 							</div>
@@ -62,19 +98,31 @@ $type_to_find = '<h5 class="search-filter-center-text empty_state"><svg xmlns="h
 								}
 							?>
 							<div class="dropdown">
-								<span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $wo['lang']['status']; ?>: <span class="status_text"><?php echo $status_text;?></span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7,10L12,15L17,10H7Z"></path></svg></span>
+								<span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo 器材價位; ?>: <span class="status_text"><?php echo 所有範圍;?></span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7,10L12,15L17,10H7Z"></path></svg></span>
 								<ul class="dropdown-menu clearfix status_menu" role="menu">
 									<label class="radio-inline" for="status-0">
 										<input type="radio" name="status" id="status-0" value="all" <?php echo $selected_status_all;?>>
-										<span><?php echo $wo['lang']['all']; ?></span>
+										<span><?php echo 任何; ?></span>
 									</label> 
 									<label class="radio-inline" for="status-1">
 										<input type="radio" name="status" id="status-1" value="on" <?php echo $selected_status_on;?>>
-										<span><?php echo $wo['lang']['online']; ?></span>
+										<span><?php echo 一萬以下; ?></span>
 									</label>
 									<label class="radio-inline" for="status-2">
 										<input type="radio" name="status" id="status-2" value="off"<?php echo $selected_status_off;?>>
-										<span><?php echo $wo['lang']['offline']; ?></span>
+										<span><?php echo 五萬以下; ?></span>
+									</label>
+									<label class="radio-inline" for="status-3">
+										<input type="radio" name="status" id="status-3" value="off"<?php echo $selected_status_off;?>>
+										<span><?php echo 十萬以下; ?></span>
+									</label>
+									<label class="radio-inline" for="status-4">
+										<input type="radio" name="status" id="status-4" value="off"<?php echo $selected_status_off;?>>
+										<span><?php echo 五十萬以下; ?></span>
+									</label>
+									<label class="radio-inline" for="status-5">
+										<input type="radio" name="status" id="status-5" value="off"<?php echo $selected_status_off;?>>
+										<span><?php echo 一百萬以下; ?></span>
 									</label>
 								</ul>
 							</div>
@@ -92,7 +140,7 @@ $type_to_find = '<h5 class="search-filter-center-text empty_state"><svg xmlns="h
 							?>
 							<div class="dropdown">
 							<!-- <?php //echo $wo['lang']['gender']; ?> -->
-								<span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">性別: <span class="gender_text"><?php echo $gender_text;?></span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7,10L12,15L17,10H7Z"></path></svg></span> 
+								<span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">品牌 <span class="gender_text"><?php echo $gender_text;?></span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7,10L12,15L17,10H7Z"></path></svg></span> 
 								<ul class="dropdown-menu clearfix gender_menu" role="menu">
 									<?php foreach ($wo['genders'] as $key => $gender) { ?>
 										<label class="radio-inline" for="gender-<?php echo($key) ?>">
@@ -122,7 +170,7 @@ $type_to_find = '<h5 class="search-filter-center-text empty_state"><svg xmlns="h
 								}
 							?>
 							<div class="dropdown">
-								<span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $wo['lang']['profile_picture']; ?>: <span class="image_text"><?php echo $image_text;?></span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7,10L12,15L17,10H7Z"></path></svg></span>
+								<span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo 租金; ?>: <span class="image_text"><?php echo $image_text;?></span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7,10L12,15L17,10H7Z"></path></svg></span>
 								<ul class="dropdown-menu clearfix image_menu" role="menu">
 									<label class="radio-inline" for="image-0">
 										<input type="radio" name="image" id="image-0" value="all" <?php echo $selected_status_image_all;?>>
@@ -182,19 +230,7 @@ $type_to_find = '<h5 class="search-filter-center-text empty_state"><svg xmlns="h
 									} 
 								}
 							?>
-							<div class="dropdown">
-								<span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><?php echo $wo['lang']['age']; ?>: <span class="age_text"><?php echo $age_text;?></span> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M7,10L12,15L17,10H7Z"></path></svg></span>
-								<ul class="dropdown-menu clearfix age_menu" role="menu">
-									<label class="radio-inline" for="filterbyage-0">
-										<input type="radio" name="filterbyage" id="filterbyage-0" value="yes" onclick="$('.agefilter_hide').css({'display':'block'});" <?php echo $selected_filterbyage_on;?>>
-										<span><?php echo $wo['lang']['yes']; ?></span>
-									</label>
-									<label class="radio-inline" for="filterbyage-1">
-										<input type="radio" name="filterbyage" id="filterbyage-1" value="no" onclick="$('.agefilter_hide').css({'display':'none'});" <?php echo $selected_filterbyage_off;?>>
-										<span><?php echo $wo['lang']['no']; ?></span>
-									</label>
-								</ul>
-							</div>
+							
 							</div>
 						</div>
 						
@@ -202,13 +238,13 @@ $type_to_find = '<h5 class="search-filter-center-text empty_state"><svg xmlns="h
 							<div class="row ml0 mr0">
 								<div class="col-md-6 col-xs-6">
 									<div class="form-group">
-										<input type="text" name="query" id="query" class="form-control" value="<?php echo (isset($_GET['query'])) ? Wo_Secure($_GET['query']): '';?>" autocomplete="off" placeholder="<?php echo $wo['lang']['keyword'];?>">
+										<input type="text" name="query" id="query" class="form-control" value="<?php echo (isset($_GET['query'])) ? Wo_Secure($_GET['query']): '';?>" autocomplete="off" placeholder="<?php echo 輸入詳細器材名稱;?>">
 									</div>
 								</div>
 								<div class="col-md-6 col-xs-6">
 									<div class="form-group">
 										<select name="country" id="country" class="form-control">
-											<option value="all" selected><?php echo $wo['lang']['country'];?>: <?php echo $wo['lang']['all'];?></option>
+											<option value="all" selected><?php echo 選擇你所在的地區;?></option>
 											<?php 
 												foreach ($wo['countries_name'] as $country_ids => $country) { 
 												$selected_c = (!empty($_GET['country']) && $_GET['country'] == $country_ids) ? ' selected': '';

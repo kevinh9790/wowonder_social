@@ -190,6 +190,76 @@ function make_slides($connect)
     }
   </style>
 
+  <style>
+    .main-menu {
+      color: #FFFFFF;
+      background-color: #666666;
+      padding: 5px;
+      margin: 0px;
+      cursor: pointer;
+      display: inline-block;
+
+    }
+
+    /* 主選單的樣式 */
+
+    .main-menu:hover {
+      background-color: #0000FF;
+
+    }
+
+    .sub-menu {
+      background-color: #fff;
+      margin: 5px -5px;
+      padding: 0px;
+      list-style-type: none;
+      position: absolute;
+      z-index: 1;
+      display: block;
+      border-radius: 5px;
+
+
+    }
+
+    /* 下拉清單的樣式 */
+
+    .sub-menu li {
+      padding: 7px 25px;
+      text-align: left;
+      font-family: "Lato", sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      display: block;
+      text-decoration: none;
+      color: #525252;
+
+    }
+
+
+    /* 下拉清單每一列的樣式 */
+
+    .sub-menu li:hover {
+      color: #fff;
+      background-color: #4d91ea;
+      border-radius: 5px;
+
+    }
+
+    .sub-menu a {
+      text-align: left;
+      display: block;
+      text-decoration: none;
+      color: #525252;
+    }
+
+    .sub-menu a:hover {
+      color: #fff;
+
+      text-decoration: none;
+
+    }
+  </style>
+
 
 </head>
 
@@ -291,9 +361,9 @@ function make_slides($connect)
     </div>
 
     <div class="container">
-    <div class="col-md-12 mb-4">
-    <h1 class="slider-title text-uppercase font-weight-bold">器材徵集</h1>
-    </div>
+      <div class="col-md-12 mb-4">
+        <h1 class="slider-title text-uppercase font-weight-bold">器材徵集</h1>
+      </div>
 
 
       <!--Section: Contact-->
@@ -301,90 +371,66 @@ function make_slides($connect)
         <form action="https://localhost/wowonder_social/Script/search" method="get" class="search-filter-form" id="search_form">
           <div class="sun_srch_tp_filtr">
             <div class="frst_srch_row">
-              <div class="dropdown">
-                <span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">出借項目: <span class="verfied_text">任何</span></span>
-                <ul class="dropdown-menu clearfix verfied_menu" role="menu">
-                  <label class="radio-inline" for="verified-0">
-                    <input type="radio" name="verified" id="verified-0" value="all" checked="">
-                    <span>任何</span>
-                  </label>
-                  <label class="radio-inline" for="verified-1">
-                    <input type="radio" name="verified" id="verified-1" value="on">
-                    <span>已驗證</span>
-                  </label>
-                  <label class="radio-inline" for="verified-2">
-                    <input type="radio" name="verified" id="verified-2" value="off">
-                    <span>未驗證</span>
-                  </label>
+
+
+              <span class="dropdown-toggle" style="padding: 4px 10px;" onclick="switchMenu( this, 'SubMenu1' )">出借項目: <span class="loan_text">所有範圍</span>
+                <ul id="SubMenu1" class="sub-menu loan" style="display:none;">
+                  <li id="loan" value="0">所有範圍</li>
+                  <li id="loan" value="1">錄音介面</li>
+                  <li id="loan" value="2">鍵盤</li>
+                  <li id="loan" value="3">合成器</li>
+                  <li id="loan" value="4">模組化合成器</li>
+                  <li id="loan" value="5">節奏/取樣機</li>
+                  <li id="loan" value="6">聲學材料</li>
+                  <li id="loan" value="7">傳統樂器</li>
+                  <li id="loan" value="8">DJ器材</li>
+                  <li id="loan" value="9">音箱</li>
+                  <li id="loan" value="10">效果器</li>
+                  <li id="loan" value="11">其他</li>
                 </ul>
-              </div>
-              <div class="dropdown">
-                <span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">出借類型: <span class="status_text">任何</span></span>
-                <ul class="dropdown-menu clearfix status_menu" role="menu">
-                  <label class="radio-inline" for="status-0">
-                    <input type="radio" name="status" id="status-0" value="all" checked="">
-                    <span>任何</span>
-                  </label>
-                  <label class="radio-inline" for="status-1">
-                    <input type="radio" name="status" id="status-1" value="on">
-                    <span>線上</span>
-                  </label>
-                  <label class="radio-inline" for="status-2">
-                    <input type="radio" name="status" id="status-2" value="off">
-                    <span>離線</span>
-                  </label>
+              </span>
+
+              <span class="dropdown-toggle" style="padding: 4px 10px;" onclick="switchMenu( this, 'SubMenu2' )">器材價位: <span class="money_rang_text">所有範圍</span>
+                <ul id="SubMenu2" class="sub-menu money_rang" style="display:none;">
+                  <li>1萬以下</li>
+                  <li>5萬以下</li>
+                  <li>10萬以下</li>
+                  <li>50萬以下</li>
+                  <li>100萬以下</li>
                 </ul>
-              </div>
-              <div class="dropdown">
-                <!--  -->
-                <span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">品牌: <span class="gender_text">任何</span> </span>
-                <ul class="dropdown-menu clearfix gender_menu" role="menu">
-                  <label class="radio-inline" for="gender-female">
-                    <input type="radio" name="gender" id="gender-female" value="female">
-                    <span>女生</span>
-                  </label>
-                  <label class="radio-inline" for="gender-male">
-                    <input type="radio" name="gender" id="gender-male" value="male">
-                    <span>男生</span>
-                  </label>
-                  <label class="radio-inline" for="gender-1652">
-                    <input type="radio" name="gender" id="gender-1652" value="1652">
-                    <span>性別中立</span>
-                  </label>
+              </span>
+
+              <span class="dropdown-toggle" style="padding: 4px 10px;" onclick="switchMenu( this, 'SubMenu3' )">品牌: <span class="brand_text">所有範圍</span>
+                <ul id="SubMenu3" class="sub-menu brand" style="display:none;">
+                  <li>RODE</li>
+                  <li>Focusrite</li>
+                  <li>Steinberg</li>
+                  <li>PreSonus</li>
+                  <li>Roland</li>
+                  <li>Yamaha山葉</li>
+                  <li>Dynaudio</li>
+                  <li>EvE</li>
+                  <li>Focal</li>
+                  <li>Tannoy</li>
+                  <li>其他</li>
                 </ul>
-              </div>
+              </span>
+
+
             </div>
             <div class="sec_srch_row">
-              
-              <script>
-                $(function() {
-                  $("#slider-range").slider({
-                    range: true,
-                    min: 10,
-                    max: 70,
-                    values: [18, 50],
-                    slide: function(event, ui) {
-                      $("#amount").val(ui.values[0] + " - " + ui.values[1]);
-                      $("#age_from").val(ui.values[0]);
-                      $("#age_to").val(ui.values[1]);
-                    }
-                  });
-                  $("#amount").val($("#slider-range").slider("values", 0) + " - " + $("#slider-range").slider("values", 1));
-                });
-              </script>
-              <div class="dropdown">
-                <span class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">租金: <span class="age_text">No</span> </span>
-                <ul class="dropdown-menu clearfix age_menu" role="menu">
-                  <label class="radio-inline" for="filterbyage-0">
-                    <input type="radio" name="filterbyage" id="filterbyage-0" value="yes" onclick="$('.agefilter_hide').css({'display':'block'});">
-                    <span>Yes</span>
-                  </label>
-                  <label class="radio-inline" for="filterbyage-1">
-                    <input type="radio" name="filterbyage" id="filterbyage-1" value="no" onclick="$('.agefilter_hide').css({'display':'none'});" checked="">
-                    <span>No</span>
-                  </label>
+              <span class="dropdown-toggle" style="padding: 4px 10px;" onclick="switchMenu( this, 'SubMenu4' )">租金: <span class="rent_text">所有範圍</span>
+                <ul id="SubMenu4" class="sub-menu rent" style="display:none;">
+                  <li>免費</li>
+                  <li>1000以下</li>
+                  <li>2000以下</li>
+                  <li>3000以下</li>
+                  <li>5000以上</li>
+                  <li>按日計費</li>
+                  <li>按時計費</li>
+                  <li>其他</li>
                 </ul>
-              </div>
+              </span>
             </div>
           </div>
 
@@ -392,7 +438,7 @@ function make_slides($connect)
             <div class="row ml0 mr0">
               <div class="col-md-6 col-xs-6">
                 <div class="form-group">
-                  <input type="text" name="query" id="query" class="form-control" value="" autocomplete="off" placeholder="關鍵字">
+                  <input type="text" name="query" id="query" class="form-control" value="" autocomplete="off" placeholder="輸入詳細器材名稱">
                 </div>
               </div>
               <div class="col-md-6 col-xs-6">
@@ -660,7 +706,7 @@ function make_slides($connect)
           </div>
 
           <div class="sun_srch_btn text-center">
-            <button type="submit" class="btn btn-primary" >
+            <button type="submit" class="btn btn-primary">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"></path>
               </svg> 搜尋 </button>
@@ -775,7 +821,8 @@ function make_slides($connect)
 
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script type="text/javascript" src="js/popper.min.js"></script>
+
+  <!-- <script type="text/javascript" src="js/popper.min.js"></script> -->
   <!-- Bootstrap core JavaScript -->
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
@@ -783,12 +830,70 @@ function make_slides($connect)
   <!-- Your custom scripts (optional) -->
   <script type="text/javascript" src="js/custom.js"></script>
 
+
+
 </body>
 
 </html>
 
+<script type="text/javascript">
+  var VisibleMenu = ''; // 記錄目前顯示的子選單的 ID
+
+  // 顯示或隱藏子選單
+  function switchMenu(theMainMenu, theSubMenu, theEvent) {
+    var SubMenu = document.getElementById(theSubMenu);
+    if (SubMenu.style.display == 'none') { // 顯示子選單
+      SubMenu.style.minWidth = theMainMenu.clientWidth; // 讓子選單的最小寬度與主選單相同 (僅為了美觀)
+      SubMenu.style.display = 'block';
+      hideMenu(); // 隱藏子選單
+      VisibleMenu = theSubMenu;
+    } else { // 隱藏子選單
+      if (theEvent != 'MouseOver' || VisibleMenu != theSubMenu) {
+        SubMenu.style.display = 'none';
+        VisibleMenu = '';
+      }
+    }
+  }
+
+  // 隱藏子選單
+  function hideMenu() {
+    if (VisibleMenu != '') {
+      document.getElementById(VisibleMenu).style.display = 'none';
+    }
+    VisibleMenu = '';
+  }
+</script>
+
+
 <script>
   $(document).ready(function() {
+
+
+    $(document).ready(function() {
+      $(".loan > li ").click(function() {
+        $(".loan_text").html($(this).html());
+      });
+    });
+
+    $(document).ready(function() {
+      $(".money_rang > li ").click(function() {
+        $(".money_rang_text").html($(this).html());
+      });
+    });
+
+    $(document).ready(function() {
+      $(".brand > li ").click(function() {
+        $(".brand_text").html($(this).html());
+      });
+    });
+
+    $(document).ready(function() {
+      $(".rent > li ").click(function() {
+        $(".rent_text").html($(this).html());
+      });
+    });
+
+
 
     $('.post-wrapper').slick({
       nextArrow: $('.next'),
